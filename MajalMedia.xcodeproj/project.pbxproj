@@ -14,6 +14,9 @@
 		332210FA1F33016700485BA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 332210F91F33016700485BA1 /* Assets.xcassets */; };
 		332210FD1F33016700485BA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332210FB1F33016700485BA1 /* LaunchScreen.storyboard */; };
 		332211081F33070D00485BA1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332211071F33070D00485BA1 /* MainVC.swift */; };
+		334260301F3343A90081C24F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3342602F1F3343A90081C24F /* Alamofire.framework */; };
+		33B3008C1F33393000070C4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3008B1F33393000070C4C /* Constants.swift */; };
+		33B3008E1F333E7C00070C4C /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3008D1F333E7C00070C4C /* Token.swift */; };
 		66AD349B214E0D374D8072C3 /* Pods_MajalMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A56A7A73FEE142ADFC4928E /* Pods_MajalMedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		332210FC1F33016700485BA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		332210FE1F33016700485BA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		332211071F33070D00485BA1 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		3342602F1F3343A90081C24F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Release-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		33B3008B1F33393000070C4C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		33B3008D1F333E7C00070C4C /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		627D22B246240361774113C5 /* Pods-MajalMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajalMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MajalMedia/Pods-MajalMedia.debug.xcconfig"; sourceTree = "<group>"; };
 		8A56A7A73FEE142ADFC4928E /* Pods_MajalMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MajalMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D064CA6C8FA91D3A866ADF /* Pods-MajalMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajalMedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-MajalMedia/Pods-MajalMedia.release.xcconfig"; sourceTree = "<group>"; };
@@ -37,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				334260301F3343A90081C24F /* Alamofire.framework in Frameworks */,
 				66AD349B214E0D374D8072C3 /* Pods_MajalMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +54,7 @@
 		111DF6BF4D186FF82E9BF92E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3342602F1F3343A90081C24F /* Alamofire.framework */,
 				8A56A7A73FEE142ADFC4928E /* Pods_MajalMedia.framework */,
 			);
 			name = Frameworks;
@@ -73,6 +81,7 @@
 		332210EE1F33016700485BA1 /* MajalMedia */ = {
 			isa = PBXGroup;
 			children = (
+				33B3008A1F3338D700070C4C /* Methods */,
 				332211061F3306EB00485BA1 /* View */,
 				332210EF1F33016700485BA1 /* AppDelegate.swift */,
 				332210F31F33016700485BA1 /* Main.storyboard */,
@@ -91,6 +100,15 @@
 				332211071F33070D00485BA1 /* MainVC.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		33B3008A1F3338D700070C4C /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				33B3008B1F33393000070C4C /* Constants.swift */,
+				33B3008D1F333E7C00070C4C /* Token.swift */,
+			);
+			name = Methods;
 			sourceTree = "<group>";
 		};
 		B3761D0D1A544CA12CC606FC /* Pods */ = {
@@ -232,8 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33B3008C1F33393000070C4C /* Constants.swift in Sources */,
 				332210F21F33016700485BA1 /* SplashVC.swift in Sources */,
 				332211081F33070D00485BA1 /* MainVC.swift in Sources */,
+				33B3008E1F333E7C00070C4C /* Token.swift in Sources */,
 				332210F01F33016700485BA1 /* AppDelegate.swift in Sources */,
 				332210F81F33016700485BA1 /* MajalMedia.xcdatamodeld in Sources */,
 			);
@@ -360,6 +380,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 52RS9A54UT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos/Alamofire",
+				);
 				INFOPLIST_FILE = MajalMedia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = okams.MajalMedia;
@@ -374,6 +398,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 52RS9A54UT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos/Alamofire",
+				);
 				INFOPLIST_FILE = MajalMedia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = okams.MajalMedia;
@@ -401,6 +429,7 @@
 				332211031F33016700485BA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
