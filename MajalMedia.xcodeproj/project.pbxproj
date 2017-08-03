@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		332210F01F33016700485BA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332210EF1F33016700485BA1 /* AppDelegate.swift */; };
-		332210F21F33016700485BA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332210F11F33016700485BA1 /* ViewController.swift */; };
+		332210F21F33016700485BA1 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332210F11F33016700485BA1 /* SplashVC.swift */; };
 		332210F51F33016700485BA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332210F31F33016700485BA1 /* Main.storyboard */; };
 		332210F81F33016700485BA1 /* MajalMedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 332210F61F33016700485BA1 /* MajalMedia.xcdatamodeld */; };
 		332210FA1F33016700485BA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 332210F91F33016700485BA1 /* Assets.xcassets */; };
 		332210FD1F33016700485BA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332210FB1F33016700485BA1 /* LaunchScreen.storyboard */; };
+		332211081F33070D00485BA1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332211071F33070D00485BA1 /* MainVC.swift */; };
+		66AD349B214E0D374D8072C3 /* Pods_MajalMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A56A7A73FEE142ADFC4928E /* Pods_MajalMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		332210EC1F33016700485BA1 /* MajalMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MajalMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		332210EF1F33016700485BA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		332210F11F33016700485BA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		332210F11F33016700485BA1 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		332210F41F33016700485BA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		332210F71F33016700485BA1 /* MajalMedia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MajalMedia.xcdatamodel; sourceTree = "<group>"; };
 		332210F91F33016700485BA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		332210FC1F33016700485BA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		332210FE1F33016700485BA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		332211071F33070D00485BA1 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		627D22B246240361774113C5 /* Pods-MajalMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajalMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MajalMedia/Pods-MajalMedia.debug.xcconfig"; sourceTree = "<group>"; };
+		8A56A7A73FEE142ADFC4928E /* Pods_MajalMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MajalMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4D064CA6C8FA91D3A866ADF /* Pods-MajalMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajalMedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-MajalMedia/Pods-MajalMedia.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66AD349B214E0D374D8072C3 /* Pods_MajalMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		111DF6BF4D186FF82E9BF92E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A56A7A73FEE142ADFC4928E /* Pods_MajalMedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		332210E31F33016700485BA1 = {
 			isa = PBXGroup;
 			children = (
 				332210EE1F33016700485BA1 /* MajalMedia */,
 				332210ED1F33016700485BA1 /* Products */,
+				B3761D0D1A544CA12CC606FC /* Pods */,
+				111DF6BF4D186FF82E9BF92E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +73,8 @@
 		332210EE1F33016700485BA1 /* MajalMedia */ = {
 			isa = PBXGroup;
 			children = (
+				332211061F3306EB00485BA1 /* View */,
 				332210EF1F33016700485BA1 /* AppDelegate.swift */,
-				332210F11F33016700485BA1 /* ViewController.swift */,
 				332210F31F33016700485BA1 /* Main.storyboard */,
 				332210F91F33016700485BA1 /* Assets.xcassets */,
 				332210FB1F33016700485BA1 /* LaunchScreen.storyboard */,
@@ -67,6 +84,24 @@
 			path = MajalMedia;
 			sourceTree = "<group>";
 		};
+		332211061F3306EB00485BA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				332210F11F33016700485BA1 /* SplashVC.swift */,
+				332211071F33070D00485BA1 /* MainVC.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B3761D0D1A544CA12CC606FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				627D22B246240361774113C5 /* Pods-MajalMedia.debug.xcconfig */,
+				B4D064CA6C8FA91D3A866ADF /* Pods-MajalMedia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 332211011F33016700485BA1 /* Build configuration list for PBXNativeTarget "MajalMedia" */;
 			buildPhases = (
+				6317DA9DD9F307DA7E9C967E /* [CP] Check Pods Manifest.lock */,
 				332210E81F33016700485BA1 /* Sources */,
 				332210E91F33016700485BA1 /* Frameworks */,
 				332210EA1F33016700485BA1 /* Resources */,
+				AEDAFAFA281D7EE5571709BF /* [CP] Embed Pods Frameworks */,
+				F3F2EFECE461541B553285C0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,12 +173,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6317DA9DD9F307DA7E9C967E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MajalMedia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEDAFAFA281D7EE5571709BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MajalMedia/Pods-MajalMedia-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MajalMedia/Pods-MajalMedia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3F2EFECE461541B553285C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MajalMedia/Pods-MajalMedia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		332210E81F33016700485BA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				332210F21F33016700485BA1 /* ViewController.swift in Sources */,
+				332210F21F33016700485BA1 /* SplashVC.swift in Sources */,
+				332211081F33070D00485BA1 /* MainVC.swift in Sources */,
 				332210F01F33016700485BA1 /* AppDelegate.swift in Sources */,
 				332210F81F33016700485BA1 /* MajalMedia.xcdatamodeld in Sources */,
 			);
@@ -263,6 +356,7 @@
 		};
 		332211021F33016700485BA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 627D22B246240361774113C5 /* Pods-MajalMedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 52RS9A54UT;
@@ -276,6 +370,7 @@
 		};
 		332211031F33016700485BA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4D064CA6C8FA91D3A866ADF /* Pods-MajalMedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 52RS9A54UT;
