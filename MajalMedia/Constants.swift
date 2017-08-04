@@ -12,3 +12,7 @@ let URL_Base = "http://lowcost-env.pmtiunacvu.us-east-1.elasticbeanstalk.com/"
 
 let app_key = "demo"
 let app_secret = "12345678"
+
+let URL_Token = "http://lowcost-env.pmtiunacvu.us-east-1.elasticbeanstalk.com/"
+
+typealias DownloadComplete = () -> ()

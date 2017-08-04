@@ -26,6 +26,38 @@ class Token{
     var ttl: Int32 {
         return _ttl
     }
+    
+    func downloadTokenDetails(completed: DownloadComplete){
+        // Alamofire download
+        let tokendownload = URL(string: URL_Token)!
+        let params: Parameters = [
+            "app_key": "demo",
+            "app_secret": "12345678"
+        ]
+        
+//        let expectation = self.expectation(description: "should work")
+        
+        let manager = Alamofire.SessionManager.default
+        manager.session.configuration.timeoutIntervalForRequest = 120
+        
+        manager.request(tokendownload, method: .post, parameters: params)
+            .responseJSON { response in
+                switch (response.result) {
+                case .success:
+                    //do json stuff
+                    let json = response.result.value
+                    print("result: \(json!)") // leaving it without ! mark will print "optional" before the json string
+                    break
+                case .failure(let error):
+                    if error._code == NSURLErrorTimedOut {
+                        //HANDLE TIMEOUT HERE
+                    }
+                    print("\n\nAuth request failed with error:\n \(error)")
+                    break
+                }
+        }
+        completed()
+    }
 }
 
 

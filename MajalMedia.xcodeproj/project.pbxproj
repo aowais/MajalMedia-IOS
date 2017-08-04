@@ -155,7 +155,7 @@
 				TargetAttributes = {
 					332210EB1F33016700485BA1 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 52RS9A54UT;
+						DevelopmentTeam = 4W226CGUQA;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -379,7 +379,7 @@
 			baseConfigurationReference = 627D22B246240361774113C5 /* Pods-MajalMedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 52RS9A54UT;
+				DEVELOPMENT_TEAM = 4W226CGUQA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Release-iphoneos/Alamofire",
@@ -397,7 +397,7 @@
 			baseConfigurationReference = B4D064CA6C8FA91D3A866ADF /* Pods-MajalMedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 52RS9A54UT;
+				DEVELOPMENT_TEAM = 4W226CGUQA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Release-iphoneos/Alamofire",
