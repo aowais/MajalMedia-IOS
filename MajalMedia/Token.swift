@@ -10,9 +10,9 @@ import UIKit
 import Alamofire
 
 class Token{
-    var _success: Bool!
-    var _token: Int64!
-    var _ttl: Int64!
+    private var _success: Bool!
+    private var _token: Int64!
+    private var _ttl: Int64!
     
     
     var success: Bool {

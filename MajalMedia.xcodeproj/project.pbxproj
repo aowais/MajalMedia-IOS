@@ -18,6 +18,7 @@
 		33B3008C1F33393000070C4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3008B1F33393000070C4C /* Constants.swift */; };
 		33B3008E1F333E7C00070C4C /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3008D1F333E7C00070C4C /* Token.swift */; };
 		66AD349B214E0D374D8072C3 /* Pods_MajalMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A56A7A73FEE142ADFC4928E /* Pods_MajalMedia.framework */; };
+		68B2160C1F35D037008A033B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B2160B1F35D037008A033B /* News.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		33B3008B1F33393000070C4C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		33B3008D1F333E7C00070C4C /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		627D22B246240361774113C5 /* Pods-MajalMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajalMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MajalMedia/Pods-MajalMedia.debug.xcconfig"; sourceTree = "<group>"; };
+		68B2160B1F35D037008A033B /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		8A56A7A73FEE142ADFC4928E /* Pods_MajalMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MajalMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D064CA6C8FA91D3A866ADF /* Pods-MajalMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajalMedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-MajalMedia/Pods-MajalMedia.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 			children = (
 				33B3008B1F33393000070C4C /* Constants.swift */,
 				33B3008D1F333E7C00070C4C /* Token.swift */,
+				68B2160B1F35D037008A033B /* News.swift */,
 			);
 			name = Methods;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				332210F21F33016700485BA1 /* SplashVC.swift in Sources */,
 				332211081F33070D00485BA1 /* MainVC.swift in Sources */,
 				33B3008E1F333E7C00070C4C /* Token.swift in Sources */,
+				68B2160C1F35D037008A033B /* News.swift in Sources */,
 				332210F01F33016700485BA1 /* AppDelegate.swift in Sources */,
 				332210F81F33016700485BA1 /* MajalMedia.xcdatamodeld in Sources */,
 			);
