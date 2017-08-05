@@ -10,16 +10,39 @@ import UIKit
 
 class SplashVC: UIViewController {
 
+    var token = Token()
     @IBOutlet weak var loader: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         loader.startAnimating()
-        gotNextView()
+        let storedTtl = token.getTtl()
+        print("storedTtl: \(storedTtl)")
+        let currentTime = token.getCurrentMillis()
+        print("currentTime: \(currentTime)")
+        if currentTime > storedTtl{
+            token.downloadTokenDetails{ SUCCESS in
+                if SUCCESS!{
+                    print("download finished")
+                    self.loader.stopAnimating()
+                    self.performSegue(withIdentifier: "seg", sender: nil)
+                }
+                else{
+                    print("SplashVC token error")
+                }
+            }
+        }
+        else{
+            print("token within time, go to next view")
+            gotNextView()
+        }
+//        gotNextView()
     }
     
+
+    
     func gotNextView(){
-        let deadlineTime = DispatchTime.now() + .seconds(5)
+        let deadlineTime = DispatchTime.now() + .seconds(1)
         DispatchQueue.main.asyncAfter(deadline: deadlineTime, execute: {
             //do here what you want
             self.loader.stopAnimating()

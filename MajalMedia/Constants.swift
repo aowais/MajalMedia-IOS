@@ -15,4 +15,6 @@ let app_secret = "12345678"
 
 let URL_Token = "http://lowcost-env.pmtiunacvu.us-east-1.elasticbeanstalk.com/"
 
-typealias DownloadComplete = () -> ()
+typealias DownloadComplete = (Bool?) -> ()
+
+
