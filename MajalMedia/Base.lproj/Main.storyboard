@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,14 +41,14 @@
                     </view>
                     <connections>
                         <outlet property="loader" destination="EKp-4x-ndB" id="qbn-yf-uyb"/>
-                        <segue destination="VgC-82-wJM" kind="show" identifier="seg" id="IBE-xu-0s7"/>
+                        <segue destination="odF-NE-ENa" kind="show" identifier="seg" id="IBE-xu-0s7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
-        <!--MainVC-->
+        <!--المجال-->
         <scene sceneID="SHr-3z-h0g">
             <objects>
                 <viewController id="VgC-82-wJM" customClass="MainVC" customModule="MajalMedia" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,14 +61,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CFX-6i-dSg">
-                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="SH5-PU-4DK">
+                                    <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zW5-W5-Xmz">
+                                            <rect key="frame" x="177" y="16" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="zW5-W5-Xmz" firstAttribute="centerX" secondItem="SH5-PU-4DK" secondAttribute="centerX" id="Eyc-om-T2z"/>
+                                        <constraint firstItem="zW5-W5-Xmz" firstAttribute="bottom" secondItem="SH5-PU-4DK" secondAttribute="bottomMargin" id="mt3-DV-37D"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="104" id="EgX-Tg-g6a" customClass="NewsCell" customModule="MajalMedia" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EgX-Tg-g6a" id="e8e-16-Om3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="103.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHE-de-KNE">
@@ -133,17 +147,77 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="K5A-Nb-BV9" firstAttribute="top" secondItem="CFX-6i-dSg" secondAttribute="bottom" id="3Rv-gB-fie"/>
-                            <constraint firstItem="CFX-6i-dSg" firstAttribute="leading" secondItem="6fB-QT-eE4" secondAttribute="leading" id="GOT-j3-nwA"/>
-                            <constraint firstAttribute="trailing" secondItem="CFX-6i-dSg" secondAttribute="trailing" id="YTW-j3-EFT"/>
-                            <constraint firstItem="CFX-6i-dSg" firstAttribute="top" secondItem="GV4-UV-gjX" secondAttribute="bottom" constant="8" id="juv-BS-WGq"/>
+                            <constraint firstAttribute="trailing" secondItem="CFX-6i-dSg" secondAttribute="trailing" id="JrD-KO-esL"/>
+                            <constraint firstItem="CFX-6i-dSg" firstAttribute="leading" secondItem="6fB-QT-eE4" secondAttribute="leading" id="hXz-C1-UNr"/>
+                            <constraint firstItem="CFX-6i-dSg" firstAttribute="top" secondItem="6fB-QT-eE4" secondAttribute="top" id="k8x-4D-Cg0"/>
+                            <constraint firstItem="K5A-Nb-BV9" firstAttribute="top" secondItem="CFX-6i-dSg" secondAttribute="bottom" id="xFg-zU-ypv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="المجال" id="62e-wc-pC4"/>
                     <connections>
+                        <outlet property="loaderInd" destination="zW5-W5-Xmz" id="REs-xO-iHU"/>
                         <outlet property="tableView" destination="CFX-6i-dSg" id="FfY-kh-SD6"/>
+                        <segue destination="ac3-Av-gbl" kind="show" identifier="NewsDetails" id="QJE-Nl-ynd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbW-kt-9bv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824.8" y="121.88905547226388"/>
+        </scene>
+        <!--News SlidesVC-->
+        <scene sceneID="ACT-HX-QCr">
+            <objects>
+                <viewController id="ac3-Av-gbl" customClass="NewsSlidesVC" customModule="MajalMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EVb-43-tDu"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Mn-7O-3jq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Rb-R9-esi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="kZL-0W-c71">
+                                <rect key="frame" x="8" y="622" width="359" height="37"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1RV-55-BuX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1RV-55-BuX" secondAttribute="trailing" id="Nza-np-MkI"/>
+                            <constraint firstItem="1RV-55-BuX" firstAttribute="top" secondItem="EVb-43-tDu" secondAttribute="bottom" id="eyR-Qt-3N5"/>
+                            <constraint firstItem="1RV-55-BuX" firstAttribute="leading" secondItem="0Rb-R9-esi" secondAttribute="leading" id="gPL-na-qeG"/>
+                            <constraint firstItem="kZL-0W-c71" firstAttribute="leading" secondItem="0Rb-R9-esi" secondAttribute="leading" constant="8" id="hFj-rf-1kg"/>
+                            <constraint firstAttribute="trailing" secondItem="kZL-0W-c71" secondAttribute="trailing" constant="8" id="pqg-W4-4h9"/>
+                            <constraint firstItem="7Mn-7O-3jq" firstAttribute="top" secondItem="kZL-0W-c71" secondAttribute="bottom" constant="8" id="tS6-Oj-2mE"/>
+                            <constraint firstItem="7Mn-7O-3jq" firstAttribute="top" secondItem="1RV-55-BuX" secondAttribute="bottom" id="vsW-DC-duJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="kZL-0W-c71" id="oa3-Fo-DTK"/>
+                        <outlet property="scrollViewNews" destination="1RV-55-BuX" id="oOp-Kc-zGj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FUg-pC-s7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2556" y="123.68815592203899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2v0-O7-e6j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="odF-NE-ENa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FjV-fU-Zwp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VgC-82-wJM" kind="relationship" relationship="rootViewController" id="8if-oD-7Ns"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKv-Jq-gKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="885.60000000000002" y="121.88905547226388"/>
         </scene>

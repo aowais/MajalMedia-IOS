@@ -10,6 +10,7 @@ import UIKit
 
 class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var loaderInd: UIActivityIndicatorView!
     var token = Token()
     var newsDetails = NewsDownload()
     var gmc = GlobalMethods()
@@ -24,6 +25,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         loadingData = false
         tableView.delegate = self
         tableView.dataSource = self
+        loaderInd.startAnimating()
         loadMoreData()
         
     }
@@ -39,6 +41,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 }
                 self.loadingData = false
                 self.tableView.reloadData()
+                self.loaderInd.isHidden = false
             }
             else{
                 print("SplashVC token error")
@@ -51,7 +54,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let lastElement = localNews.count - 1
         if !loadingData && indexPath.row == lastElement {
             print("ask to load")
-//            indicator.startAnimating()
+            self.loaderInd.isHidden = false
             loadingData = true
             self.currentPage += 1
             loadMoreData()
@@ -71,6 +74,11 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return localNews.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "NewsDetails", sender: nil)
     }
     
     func loadMoreData(){

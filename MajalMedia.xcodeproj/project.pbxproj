@@ -21,6 +21,9 @@
 		33B3008C1F33393000070C4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3008B1F33393000070C4C /* Constants.swift */; };
 		33B3008E1F333E7C00070C4C /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3008D1F333E7C00070C4C /* Token.swift */; };
 		66AD349B214E0D374D8072C3 /* Pods_MajalMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A56A7A73FEE142ADFC4928E /* Pods_MajalMedia.framework */; };
+		6885C5881F37864700D407D5 /* NewsSlidesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885C5871F37864700D407D5 /* NewsSlidesVC.swift */; };
+		6885C58A1F378A2E00D407D5 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6885C5891F378A2E00D407D5 /* Slide.xib */; };
+		6885C58C1F378A8000D407D5 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885C58B1F378A8000D407D5 /* Slide.swift */; };
 		68B2160C1F35D037008A033B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B2160B1F35D037008A033B /* News.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,9 @@
 		33B3008B1F33393000070C4C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		33B3008D1F333E7C00070C4C /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		627D22B246240361774113C5 /* Pods-MajalMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajalMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MajalMedia/Pods-MajalMedia.debug.xcconfig"; sourceTree = "<group>"; };
+		6885C5871F37864700D407D5 /* NewsSlidesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSlidesVC.swift; sourceTree = "<group>"; };
+		6885C5891F378A2E00D407D5 /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		6885C58B1F378A8000D407D5 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		68B2160B1F35D037008A033B /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		8A56A7A73FEE142ADFC4928E /* Pods_MajalMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MajalMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D064CA6C8FA91D3A866ADF /* Pods-MajalMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajalMedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-MajalMedia/Pods-MajalMedia.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +121,9 @@
 			children = (
 				332210F11F33016700485BA1 /* SplashVC.swift */,
 				332211071F33070D00485BA1 /* MainVC.swift */,
+				6885C5871F37864700D407D5 /* NewsSlidesVC.swift */,
+				6885C5891F378A2E00D407D5 /* Slide.xib */,
+				6885C58B1F378A8000D407D5 /* Slide.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -206,6 +215,7 @@
 				332210FD1F33016700485BA1 /* LaunchScreen.storyboard in Resources */,
 				332210FA1F33016700485BA1 /* Assets.xcassets in Resources */,
 				332210F51F33016700485BA1 /* Main.storyboard in Resources */,
+				6885C58A1F378A2E00D407D5 /* Slide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +284,8 @@
 			files = (
 				33B3008C1F33393000070C4C /* Constants.swift in Sources */,
 				332210F21F33016700485BA1 /* SplashVC.swift in Sources */,
+				6885C5881F37864700D407D5 /* NewsSlidesVC.swift in Sources */,
+				6885C58C1F378A8000D407D5 /* Slide.swift in Sources */,
 				3383D2F41F36DF1B00BB04CD /* NewsDownload.swift in Sources */,
 				332211081F33070D00485BA1 /* MainVC.swift in Sources */,
 				3303F27D1F37218400426672 /* NewsCell.swift in Sources */,
