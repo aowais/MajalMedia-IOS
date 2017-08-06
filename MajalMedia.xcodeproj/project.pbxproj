@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3303F27D1F37218400426672 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3303F27C1F37218400426672 /* NewsCell.swift */; };
 		332210F01F33016700485BA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332210EF1F33016700485BA1 /* AppDelegate.swift */; };
 		332210F21F33016700485BA1 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332210F11F33016700485BA1 /* SplashVC.swift */; };
 		332210F51F33016700485BA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332210F31F33016700485BA1 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 		332210FD1F33016700485BA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332210FB1F33016700485BA1 /* LaunchScreen.storyboard */; };
 		332211081F33070D00485BA1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332211071F33070D00485BA1 /* MainVC.swift */; };
 		334260301F3343A90081C24F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3342602F1F3343A90081C24F /* Alamofire.framework */; };
+		3383D2F41F36DF1B00BB04CD /* NewsDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3383D2F31F36DF1B00BB04CD /* NewsDownload.swift */; };
+		3383D2F61F36E18900BB04CD /* GlobalMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3383D2F51F36E18900BB04CD /* GlobalMethods.swift */; };
 		33B3008C1F33393000070C4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3008B1F33393000070C4C /* Constants.swift */; };
 		33B3008E1F333E7C00070C4C /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3008D1F333E7C00070C4C /* Token.swift */; };
 		66AD349B214E0D374D8072C3 /* Pods_MajalMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A56A7A73FEE142ADFC4928E /* Pods_MajalMedia.framework */; };
@@ -22,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3303F27C1F37218400426672 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		332210EC1F33016700485BA1 /* MajalMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MajalMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		332210EF1F33016700485BA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		332210F11F33016700485BA1 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
@@ -32,6 +36,8 @@
 		332210FE1F33016700485BA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		332211071F33070D00485BA1 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		3342602F1F3343A90081C24F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Release-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		3383D2F31F36DF1B00BB04CD /* NewsDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDownload.swift; sourceTree = "<group>"; };
+		3383D2F51F36E18900BB04CD /* GlobalMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalMethods.swift; sourceTree = "<group>"; };
 		33B3008B1F33393000070C4C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		33B3008D1F333E7C00070C4C /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		627D22B246240361774113C5 /* Pods-MajalMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MajalMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MajalMedia/Pods-MajalMedia.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +68,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3303F27B1F37214C00426672 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3303F27C1F37218400426672 /* NewsCell.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		332210E31F33016700485BA1 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +97,7 @@
 		332210EE1F33016700485BA1 /* MajalMedia */ = {
 			isa = PBXGroup;
 			children = (
+				3303F27B1F37214C00426672 /* Controller */,
 				33B3008A1F3338D700070C4C /* Methods */,
 				332211061F3306EB00485BA1 /* View */,
 				332210EF1F33016700485BA1 /* AppDelegate.swift */,
@@ -110,6 +125,8 @@
 				33B3008B1F33393000070C4C /* Constants.swift */,
 				33B3008D1F333E7C00070C4C /* Token.swift */,
 				68B2160B1F35D037008A033B /* News.swift */,
+				3383D2F31F36DF1B00BB04CD /* NewsDownload.swift */,
+				3383D2F51F36E18900BB04CD /* GlobalMethods.swift */,
 			);
 			name = Methods;
 			sourceTree = "<group>";
@@ -158,7 +175,7 @@
 				TargetAttributes = {
 					332210EB1F33016700485BA1 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 4W226CGUQA;
+						DevelopmentTeam = 52RS9A54UT;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -221,10 +238,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MajalMedia/Pods-MajalMedia-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -255,9 +274,12 @@
 			files = (
 				33B3008C1F33393000070C4C /* Constants.swift in Sources */,
 				332210F21F33016700485BA1 /* SplashVC.swift in Sources */,
+				3383D2F41F36DF1B00BB04CD /* NewsDownload.swift in Sources */,
 				332211081F33070D00485BA1 /* MainVC.swift in Sources */,
+				3303F27D1F37218400426672 /* NewsCell.swift in Sources */,
 				33B3008E1F333E7C00070C4C /* Token.swift in Sources */,
 				68B2160C1F35D037008A033B /* News.swift in Sources */,
+				3383D2F61F36E18900BB04CD /* GlobalMethods.swift in Sources */,
 				332210F01F33016700485BA1 /* AppDelegate.swift in Sources */,
 				332210F81F33016700485BA1 /* MajalMedia.xcdatamodeld in Sources */,
 			);
@@ -383,7 +405,7 @@
 			baseConfigurationReference = 627D22B246240361774113C5 /* Pods-MajalMedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4W226CGUQA;
+				DEVELOPMENT_TEAM = 52RS9A54UT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Release-iphoneos/Alamofire",
@@ -401,7 +423,7 @@
 			baseConfigurationReference = B4D064CA6C8FA91D3A866ADF /* Pods-MajalMedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4W226CGUQA;
+				DEVELOPMENT_TEAM = 52RS9A54UT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Release-iphoneos/Alamofire",

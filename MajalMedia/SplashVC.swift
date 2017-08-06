@@ -11,6 +11,7 @@ import UIKit
 class SplashVC: UIViewController {
 
     var token = Token()
+    var gmc = GlobalMethods()
     @IBOutlet weak var loader: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +19,7 @@ class SplashVC: UIViewController {
         loader.startAnimating()
         let storedTtl = token.getTtl()
         print("storedTtl: \(storedTtl)")
-        let currentTime = token.getCurrentMillis()
+        let currentTime = gmc.getCurrentMillis()
         print("currentTime: \(currentTime)")
         if currentTime > storedTtl{
             token.downloadTokenDetails{ SUCCESS in

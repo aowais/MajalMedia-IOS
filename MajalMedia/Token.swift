@@ -13,7 +13,7 @@ class Token{
     private var _success: Bool!
     private var _token: Int64!
     private var _ttl: Int64!
-    
+    var gmc = GlobalMethods()
     
     var success: Bool {
         return _success
@@ -34,8 +34,6 @@ class Token{
             "app_key": app_key,
             "app_secret": app_secret
         ]
-        
-//        let expectation = self.expectation(description: "should work")
         
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 120
@@ -61,7 +59,7 @@ class Token{
                                     self._ttl = ttl
                                     print("ttl: \(ttl)")
                                 }
-                                let currentTime = self.getCurrentMillis()
+                                let currentTime = self.gmc.getCurrentMillis()
                                 let overTime = currentTime+self._ttl
                                 self.saveInstance(token: self.token, ttl: overTime)
                                 completed(true)
@@ -120,9 +118,6 @@ class Token{
         }
     }
     
-    func getCurrentMillis()->Int64 {
-        return Int64(Date().timeIntervalSince1970 * 1000)
-    }
 }
 
 
