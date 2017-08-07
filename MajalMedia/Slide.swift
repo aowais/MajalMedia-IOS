@@ -9,8 +9,7 @@
 import UIKit
 
 class Slide: UIView {
-    
-    
-    @IBOutlet weak var lbl_title: UILabel!
 
+    @IBOutlet weak var lbl_title: UILabel!
+    @IBOutlet weak var lbl_details: UILabel!
 }

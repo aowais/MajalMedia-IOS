@@ -41,6 +41,12 @@ class NewsDownload{
 //                                            print("title:\(title)")
                                             newsItem._title = title as! String
                                         }
+                                        
+                                        if let details = item["details"]{
+                                            //                                            print("title:\(title)")
+                                            newsItem._details = details as! String
+                                        }
+                                        
                                         if let main_img = item["main_img"]{
                                             newsItem._main_img = main_img as! String
                                         }

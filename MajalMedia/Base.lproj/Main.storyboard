@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -82,7 +82,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EgX-Tg-g6a" id="e8e-16-Om3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="103.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHE-de-KNE">
@@ -157,7 +157,7 @@
                     <connections>
                         <outlet property="loaderInd" destination="zW5-W5-Xmz" id="REs-xO-iHU"/>
                         <outlet property="tableView" destination="CFX-6i-dSg" id="FfY-kh-SD6"/>
-                        <segue destination="ac3-Av-gbl" kind="show" identifier="NewsDetails" id="QJE-Nl-ynd"/>
+                        <segue destination="ac3-Av-gbl" kind="show" identifier="NewsSlidesVC" id="QJE-Nl-ynd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbW-kt-9bv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,7 +167,7 @@
         <!--News SlidesVC-->
         <scene sceneID="ACT-HX-QCr">
             <objects>
-                <viewController id="ac3-Av-gbl" customClass="NewsSlidesVC" customModule="MajalMedia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsSlidesVC" id="ac3-Av-gbl" customClass="NewsSlidesVC" customModule="MajalMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EVb-43-tDu"/>
                         <viewControllerLayoutGuide type="bottom" id="7Mn-7O-3jq"/>

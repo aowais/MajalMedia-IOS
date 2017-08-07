@@ -78,7 +78,16 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "NewsDetails", sender: nil)
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "NewsSlidesVC") as! NewsSlidesVC
+        myVC.passedNews = self.localNews
+        myVC.passedPosition = indexPath.row
+        print("myVC.passedNews:count before sending:\(myVC.passedNews.count)")
+//        performSegue(withIdentifier: "NewsSlidesVC", sender: myVC)
+        navigationController?.pushViewController(myVC, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
     
     func loadMoreData(){
