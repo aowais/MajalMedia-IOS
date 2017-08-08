@@ -78,12 +78,27 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let myVC = storyboard?.instantiateViewController(withIdentifier: "NewsSlidesVC") as! NewsSlidesVC
-        myVC.passedNews = self.localNews
-        myVC.passedPosition = indexPath.row
-        print("myVC.passedNews:count before sending:\(myVC.passedNews.count)")
-//        performSegue(withIdentifier: "NewsSlidesVC", sender: myVC)
-        navigationController?.pushViewController(myVC, animated: true)
+//        let myVC = storyboard?.instantiateViewController(withIdentifier: "NewsSlidesVC") as! NewsSlidesVC
+//        myVC.passedNews = self.localNews
+//        myVC.passedPosition = indexPath.row
+//        print("myVC.passedNews:count before sending:\(myVC.passedNews.count)")
+////        performSegue(withIdentifier: "NewsSlidesVC", sender: myVC)
+//        navigationController?.pushViewController(myVC, animated: true)
+        
+        gotoTestVC()
+    }
+    
+    func gotoPager(){
+//        let myVC = storyboard?.instantiateViewController(withIdentifier: "PagerVC") as! PagerVC
+//        myVC.passedNews = self.localNews
+//        print("myVC.passedNews:count before sending:\(myVC.passedNews.count)")
+//        navigationController?.pushViewController(myVC, animated: true)
+        performSegue(withIdentifier: "PagerVC", sender: nil)
+    }
+    
+    func gotoTestVC(){
+//        testvc
+        performSegue(withIdentifier: "testvc", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

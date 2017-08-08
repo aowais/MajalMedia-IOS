@@ -79,7 +79,7 @@ class NewsSlidesVC: UIViewController, UIScrollViewDelegate {
 //            print("SubView:\(subview.frame.size)")
 //        }
 //        
-//        scrollViewNews.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
+        scrollViewNews.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
         
         
         scrollViewNews.isPagingEnabled = true
