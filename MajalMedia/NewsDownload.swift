@@ -37,6 +37,12 @@ class NewsDownload{
                                 if let data = dic["data"] as? [Dictionary<String,AnyObject>]{
                                     for item in data{
                                         let newsItem = News()
+                                        
+                                        if let nid = item["nid"]{
+                                            //                                            print("title:\(title)")
+                                            newsItem._nid = nid as! String
+                                        }
+                                        
                                         if let title = item["title"]{
 //                                            print("title:\(title)")
                                             newsItem._title = title as! String
@@ -49,6 +55,12 @@ class NewsDownload{
                                         
                                         if let main_img = item["main_img"]{
                                             newsItem._main_img = main_img as! String
+                                        }
+                                        if let page_name = item["page_name"]{
+                                            newsItem._page_name = page_name as! String
+                                        }
+                                        if let page_logo = item["page_logo"]{
+                                            newsItem._page_logo = page_logo as! String
                                         }
                                         if let created_date = item["created_date"]{
                                             newsItem._created_date = created_date as! String

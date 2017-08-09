@@ -85,7 +85,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 ////        performSegue(withIdentifier: "NewsSlidesVC", sender: myVC)
 //        navigationController?.pushViewController(myVC, animated: true)
         
-        gotoTestVC()
+        gotoTestVC(index: indexPath.row)
     }
     
     func gotoPager(){
@@ -96,9 +96,13 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         performSegue(withIdentifier: "PagerVC", sender: nil)
     }
     
-    func gotoTestVC(){
-//        testvc
-        performSegue(withIdentifier: "testvc", sender: nil)
+    func gotoTestVC(index: Int){
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "testvc") as! TestVC
+        myVC.passedNews = self.localNews
+        myVC.passedPosition = index
+        print("myVC.passedNews:count before sending:\(myVC.passedNews.count)")
+        navigationController?.pushViewController(myVC, animated: true)
+//         performSegue(withIdentifier: "testvc", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
