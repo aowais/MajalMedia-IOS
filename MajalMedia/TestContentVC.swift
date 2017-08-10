@@ -40,7 +40,7 @@ class TestContentVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nid = item?.nid
+//        let nid = item?.nid
         print("viewDidLoad:\(String(describing: item?.title))")
 //        lbl_details.text = item?.details
         let detailsH = lbl_details.bounds.size.height
@@ -53,7 +53,7 @@ class TestContentVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let nid = item?.nid
+//        let nid = item?.nid
         print("viewWillAppear:\(String(describing: item?.title))")
 //        webview.loadHTMLString(dataObject as! String, baseURL: NSURL(string: "")! as URL)
 //        lbl_details.text = dataObject as? String
@@ -67,10 +67,11 @@ class TestContentVC: UIViewController {
         var str :NSAttributedString?
         DispatchQueue.background(background: {
             // do something in background
-           str = self.item?.details.html2AttributedString
+            str = self.item?.details.html2AttributedString
+            self.lbl_details.attributedText = str
         }, completion:{
             // when background job finished, do something in main thread
-            self.lbl_details.attributedText = str
+            
             self.lbl_details.textAlignment = NSTextAlignment.right
             self.lbl_details.contentMode = .scaleToFill
             self.lbl_details.font = UIFont.systemFont(ofSize: 15)

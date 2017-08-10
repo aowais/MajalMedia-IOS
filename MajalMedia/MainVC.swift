@@ -17,11 +17,17 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var localNews = [News]()
     var loadingData: Bool!
     var currentPage = 0
+    var navigationBarAppearace = UINavigationBar.appearance()
+    
+   
 
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationBarAppearace.tintColor = UIColor.white
+        navigationBarAppearace.barTintColor = UIColor(red: 1/255, green: 115/255, blue: 177/255, alpha: 1.0)
+        navigationBarAppearace.backItem
         loadingData = false
         tableView.delegate = self
         tableView.dataSource = self
