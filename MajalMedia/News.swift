@@ -164,16 +164,6 @@ class News{
     
 }
 
-struct Tags{
-    private var _tag_name: String!
-    private var _tag_id: String!
-}
-
-struct Countries{
-    private var _country_name: String!
-    private var _country_id: String!
-}
-
 //class Tags{
 //    private var _tag_name: String!
 //    private var _tag_id: String!

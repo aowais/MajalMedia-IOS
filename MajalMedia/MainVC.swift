@@ -17,23 +17,89 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var localNews = [News]()
     var loadingData: Bool!
     var currentPage = 0
-    var navigationBarAppearace = UINavigationBar.appearance()
-    
+    @IBOutlet weak var segmentSort: UISegmentedControl!
+//    var navigationBarAppearace = UINavigationBar.appearance()
    
 
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBarAppearace.tintColor = UIColor.white
-        navigationBarAppearace.barTintColor = UIColor(red: 1/255, green: 115/255, blue: 177/255, alpha: 1.0)
-        navigationBarAppearace.backItem
+//        navigationBarAppearace.tintColor = UIColor.white
+//        navigationBarAppearace.barTintColor = UIColor(red: 1/255, green: 115/255, blue: 177/255, alpha: 1.0)
+        
+//        var _:UIBarButtonItem = UIBarButtonItem(title: "Filter", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MainVC.addTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"filter"), style: .plain, target: self, action: #selector(showAlertButtonTapped))
         loadingData = false
         tableView.delegate = self
         tableView.dataSource = self
         loaderInd.startAnimating()
         loadMoreData()
         
+    }
+    
+    @IBAction func segmentChanged(_ sender: Any) {
+        switch segmentSort.selectedSegmentIndex {
+        case 0:
+            print("segment 1")
+            filterByViews()
+        case 1:
+            print("segment 2")
+            filterByTitle()
+        case 2:
+            print("segment 3")
+            filterByDate()
+        default:
+            print("segment default")
+        }
+    }
+    
+    func filterByTitle() {
+        print("filterByTitle:\(localNews.count)")
+        localNews.sort { $0.title < $1.title }
+        tableView.reloadData()
+        tableView.setContentOffset(CGPoint.zero, animated: true)
+    }
+    
+    func filterByDate() {
+        print("filterByDate:\(localNews.count)")
+        localNews.sort { $0.created_date < $1.created_date }
+        tableView.reloadData()
+        tableView.setContentOffset(CGPoint.zero, animated: true)
+    }
+    
+    func filterByViews() {
+        print("filterByViews:\(localNews.count)")
+        for v in localNews {
+            print("v:\(v.view_count)")
+        }
+        print("----------------------")
+        localNews.sort { $0.view_count > $1.view_count }
+        tableView.reloadData()
+        tableView.setContentOffset(CGPoint.zero, animated: true)
+        for v in localNews {
+            print("v:\(v.view_count)")
+        }
+    }
+    
+    @IBAction func showAlertButtonTapped(_ sender: UIButton) {
+        
+        // create the alert
+        let alert = UIAlertController(title: "ترتيب القائمة", message: "يمكنك ترتيب قائمة الاخبار حسب الخيارات التالية", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "حسب العنوان", style: UIAlertActionStyle.default, handler: { action in
+            self.filterByTitle()
+        }))
+        alert.addAction(UIAlertAction(title: "حسب المشاهدات", style: UIAlertActionStyle.default, handler: { action in
+            self.filterByViews()
+        }))
+        alert.addAction(UIAlertAction(title: "حسب التاريخ", style: UIAlertActionStyle.default, handler: { action in
+            self.filterByDate()
+        }))
+        alert.addAction(UIAlertAction(title: "الغاء", style: UIAlertActionStyle.cancel, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     func requestDownload(token: Int64, page: Int){
@@ -66,7 +132,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             loadMoreData()
         }
         else{
-            print("asd")
+//            print("asd")
+            //
         }
     }
     
@@ -140,6 +207,13 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    
+    func parseDate(str: String) -> Date{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-mm-yyyy" //Your date format
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00") //Current time zone
+        let date = dateFormatter.date(from: "01-01-2017") //according to date format your date string
+        print(date ?? "") //Convert String to Date
+        return date!
+    }
 
 }

@@ -16,6 +16,8 @@
 		332210FD1F33016700485BA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332210FB1F33016700485BA1 /* LaunchScreen.storyboard */; };
 		332211081F33070D00485BA1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332211071F33070D00485BA1 /* MainVC.swift */; };
 		334260301F3343A90081C24F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3342602F1F3343A90081C24F /* Alamofire.framework */; };
+		335CB5991F406EAC0004039F /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335CB5981F406EAC0004039F /* Tags.swift */; };
+		335CB59B1F406EE10004039F /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335CB59A1F406EE10004039F /* Countries.swift */; };
 		3383D2F41F36DF1B00BB04CD /* NewsDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3383D2F31F36DF1B00BB04CD /* NewsDownload.swift */; };
 		3383D2F61F36E18900BB04CD /* GlobalMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3383D2F51F36E18900BB04CD /* GlobalMethods.swift */; };
 		33A5E8561F399FC20025AB9B /* PagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A5E8551F399FC20025AB9B /* PagerVC.swift */; };
@@ -42,6 +44,8 @@
 		332210FE1F33016700485BA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		332211071F33070D00485BA1 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		3342602F1F3343A90081C24F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Release-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		335CB5981F406EAC0004039F /* Tags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
+		335CB59A1F406EE10004039F /* Countries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 		3383D2F31F36DF1B00BB04CD /* NewsDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDownload.swift; sourceTree = "<group>"; };
 		3383D2F51F36E18900BB04CD /* GlobalMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalMethods.swift; sourceTree = "<group>"; };
 		33A5E8551F399FC20025AB9B /* PagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerVC.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				68B2160B1F35D037008A033B /* News.swift */,
 				3383D2F31F36DF1B00BB04CD /* NewsDownload.swift */,
 				3383D2F51F36E18900BB04CD /* GlobalMethods.swift */,
+				335CB5981F406EAC0004039F /* Tags.swift */,
+				335CB59A1F406EE10004039F /* Countries.swift */,
 			);
 			name = Methods;
 			sourceTree = "<group>";
@@ -297,12 +303,14 @@
 				332210F21F33016700485BA1 /* SplashVC.swift in Sources */,
 				6885C5881F37864700D407D5 /* NewsSlidesVC.swift in Sources */,
 				33A5E85A1F39BDD00025AB9B /* TestContentVC.swift in Sources */,
+				335CB5991F406EAC0004039F /* Tags.swift in Sources */,
 				6885C58C1F378A8000D407D5 /* Slide.swift in Sources */,
 				3383D2F41F36DF1B00BB04CD /* NewsDownload.swift in Sources */,
 				332211081F33070D00485BA1 /* MainVC.swift in Sources */,
 				33A5E8581F39B4FF0025AB9B /* TestVC.swift in Sources */,
 				3303F27D1F37218400426672 /* NewsCell.swift in Sources */,
 				33B3008E1F333E7C00070C4C /* Token.swift in Sources */,
+				335CB59B1F406EE10004039F /* Countries.swift in Sources */,
 				68B2160C1F35D037008A033B /* News.swift in Sources */,
 				3383D2F61F36E18900BB04CD /* GlobalMethods.swift in Sources */,
 				33A5E8561F399FC20025AB9B /* PagerVC.swift in Sources */,

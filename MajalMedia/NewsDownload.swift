@@ -39,17 +39,17 @@ class NewsDownload{
                                         let newsItem = News()
                                         
                                         if let nid = item["nid"]{
-                                            //                                            print("title:\(title)")
+//                                          print("title:\(title)")
                                             newsItem._nid = nid as! String
                                         }
                                         
                                         if let title = item["title"]{
-//                                            print("title:\(title)")
+//                                          print("title:\(title)")
                                             newsItem._title = title as! String
                                         }
                                         
                                         if let details = item["details"]{
-                                            //                                            print("title:\(title)")
+//                                          print("title:\(title)")
                                             newsItem._details = details as! String
                                         }
                                         
@@ -64,6 +64,26 @@ class NewsDownload{
                                         }
                                         if let created_date = item["created_date"]{
                                             newsItem._created_date = created_date as! String
+                                        }
+                                        if let view_count = item["view_count"]{
+                                            newsItem._view_count = view_count as! String
+                                        }
+                                        
+                                        if let tags = item["tags"] as? [Dictionary<String,AnyObject>]{
+                                            var tagsArray = [Tags]()
+                                            for tag in tags{
+                                                var tagItem = Tags()
+                                                if let tag_name = tag["tag_name"]{
+                                                    print("tag_name:\(tag_name)")
+                                                    tagItem.tag_name = tag_name as! String
+                                                }
+                                                if let tag_id = tag["tag_id"]{
+                                                    print("tag_id:\(tag_id)")
+                                                    tagItem.tag_id = tag_id as! String
+                                                }
+                                                tagsArray.append(tagItem)
+                                            }
+                                            newsItem._tags = tagsArray
                                         }
                                         self.news.append(newsItem)
                                     }
