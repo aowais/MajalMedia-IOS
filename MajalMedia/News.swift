@@ -4,11 +4,12 @@
 //
 //  Created by Ahmad Owais on 8/5/17.
 //  Copyright © 2017 Ahmad Owais. All rights reserved.
+//  https://github.com/jesseXu/xcode-theme-Darcula
 
 import Foundation
 
 class News{
-    var _nid : String!
+    var _nid : Int64!
     var _node_type: String!
     var _title:String!
     var _author_id: String!
@@ -17,7 +18,7 @@ class News{
     var _details: String!
     var _comment_count: String!
     var _created_date: String!
-    var _view_count: String!
+    var _view_count: Int!
     var _main_img: String!
     var _section_name: String!
     var _section_id: String!
@@ -30,9 +31,9 @@ class News{
     var _page_type: String!
     var _page_logo: String!
     
-    var nid: String {
+    var nid: Int64 {
         if _nid == nil{
-            _nid = ""
+            _nid = 0
         }
         return _nid
     }
@@ -91,9 +92,9 @@ class News{
         }
         return _created_date
     }
-    var view_count: String {
+    var view_count: Int {
         if _view_count == nil{
-            _view_count = ""
+            _view_count = 0
         }
         return _view_count
     }

@@ -55,15 +55,26 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func filterByTitle() {
-        print("filterByTitle:\(localNews.count)")
+        print("B---------------------")
+        print("----------------------")
+        
+        for v in localNews {
+            print("v:\(v.title)")
+        }
         localNews.sort { $0.title < $1.title }
         tableView.reloadData()
         tableView.setContentOffset(CGPoint.zero, animated: true)
+        print("----------------------")
+        for v in localNews {
+            print("v:\(v.title)")
+        }
+        print("----------------------")
+        print("---------------------E")
     }
     
     func filterByDate() {
         print("filterByDate:\(localNews.count)")
-        localNews.sort { $0.created_date < $1.created_date }
+        localNews.sort { $0.nid > $1.nid }
         tableView.reloadData()
         tableView.setContentOffset(CGPoint.zero, animated: true)
     }
@@ -74,6 +85,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             print("v:\(v.view_count)")
         }
         print("----------------------")
+//        $0.compare($1) == .OrderedDescending
         localNews.sort { $0.view_count > $1.view_count }
         tableView.reloadData()
         tableView.setContentOffset(CGPoint.zero, animated: true)
@@ -88,12 +100,15 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let alert = UIAlertController(title: "ترتيب القائمة", message: "يمكنك ترتيب قائمة الاخبار حسب الخيارات التالية", preferredStyle: UIAlertControllerStyle.alert)
         
         alert.addAction(UIAlertAction(title: "حسب العنوان", style: UIAlertActionStyle.default, handler: { action in
+            self.segmentSort.selectedSegmentIndex = 1
             self.filterByTitle()
         }))
         alert.addAction(UIAlertAction(title: "حسب المشاهدات", style: UIAlertActionStyle.default, handler: { action in
+            self.segmentSort.selectedSegmentIndex = 0
             self.filterByViews()
         }))
         alert.addAction(UIAlertAction(title: "حسب التاريخ", style: UIAlertActionStyle.default, handler: { action in
+            self.segmentSort.selectedSegmentIndex = 2
             self.filterByDate()
         }))
         alert.addAction(UIAlertAction(title: "الغاء", style: UIAlertActionStyle.cancel, handler: nil))
@@ -108,7 +123,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             if SUCCESS!{
                 print("download finished")
                 for item in news!{
-                    print("news:\(item.title)")
+                    print("Adding news:\(item.title)")
                     self.localNews.append(item)
                 }
                 self.loadingData = false

@@ -40,7 +40,8 @@ class NewsDownload{
                                         
                                         if let nid = item["nid"]{
 //                                          print("title:\(title)")
-                                            newsItem._nid = nid as! String
+                                            let strInt = nid as! String
+                                            newsItem._nid = Int64(strInt)
                                         }
                                         
                                         if let title = item["title"]{
@@ -66,7 +67,8 @@ class NewsDownload{
                                             newsItem._created_date = created_date as! String
                                         }
                                         if let view_count = item["view_count"]{
-                                            newsItem._view_count = view_count as! String
+                                            let intStr = view_count as! String
+                                            newsItem._view_count = Int(intStr)
                                         }
                                         
                                         if let tags = item["tags"] as? [Dictionary<String,AnyObject>]{

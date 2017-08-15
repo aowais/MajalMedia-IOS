@@ -4,7 +4,7 @@
 //
 //  Created by Ahmad Owais on 8/6/17.
 //  Copyright © 2017 Ahmad Owais. All rights reserved.
-//
+//https://github.com/jesseXu/xcode-theme-Darcula
 
 import UIKit
 import Kingfisher
@@ -25,7 +25,7 @@ class NewsCell: UITableViewCell{
     func updateUI(item: News){
         lbl_title.text = item.title
         lbl_date.text = item.created_date
-        lbl_views.text = item.view_count
+        lbl_views.text = String(item.view_count)
         lbl_cat.text = item.page_name
         
         img_news.autoresizingMask = [.flexibleWidth, .flexibleHeight, .flexibleBottomMargin, .flexibleRightMargin, .flexibleLeftMargin, .flexibleTopMargin]
